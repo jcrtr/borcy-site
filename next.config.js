@@ -8,8 +8,8 @@ const nextConfig = {
         loader: "akamai",
         path: ""
     },
-    basePath: isProd ? "/borcy-site" : '',
-    assetPrefix: isProd ? "/borcy-site" : ''
+    basePath: isProd ? "/get-vpn-site" : '',
+    assetPrefix: isProd ? "/get-vpn-site" : ''
 };
 
 module.exports = nextConfig;
