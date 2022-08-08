@@ -18,15 +18,15 @@ const IndexPage = () => (
         <div className={'flex flex-wrap items-center justify-center text-center px-8'}>
             {/*<h2 className={'font-bold text-white text-4xl w-full py-12'}>Короче, концерты</h2>*/}
             <div className={'grid lg:grid-cols-3 gap-12'}>
-                <a href={'/vladikavkaz'}>
+                <a href={'/borcy-site/vladikavkaz'}>
                     <img
                         className={'rounded-large transform transition duration-500 hover:scale-110 cursor-pointer'}
-                        src={`6_VLADIKAVKAZ.jpg`}
+                        src={`/borcy-site/6_VLADIKAVKAZ.jpg`}
                         width={'400px'}
                         height={'100%'}
                         alt={''}/>
                 </a>
-                <a href={'/nalchik'}>
+                <a href={'/borcy-site/nalchik'}>
                     <img
                         className={'rounded-large transform transition duration-500 hover:scale-110 cursor-pointer'}
                         src={`/borcy-site/7_NALCHIK.jpg`}
@@ -34,7 +34,7 @@ const IndexPage = () => (
                         height={'100%'}
                         alt={''}/>
                 </a>
-                <a href={'/krasnodar'}>
+                <a href={'/borcy-site/krasnodar'}>
                     <img
                         className={'rounded-large transform transition duration-500 hover:scale-110 cursor-pointer'}
                         src={`/borcy-site/9_KRASNODAR.jpg`}
