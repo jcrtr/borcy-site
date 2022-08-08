@@ -6,7 +6,7 @@ const IndexPage = () => (
     <div className={'min-h-screen bg-radial-at-t from-gray-700 via-gray-900 to-gray-900 py-12 flex flex-col items-center justify-center'}>
         <div className="lg:h-[300px] lg:max-w-screen-xl flex flex-wrap items-center justify-center mb-12">
             <div className={'flex justify-center'}>
-                <img src={`/logo.png`} alt={''}/>
+                <img src={`/borcy-site/logo.png`} alt={''}/>
             </div>
             <div className={'lg:px-12'}>
                 <h1 className={'font-bold text-white text-2xl py-2 text-center lg:text-left lg:mt-0 mt-8'}>Команда КВН</h1>

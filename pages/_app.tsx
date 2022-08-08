@@ -8,7 +8,7 @@ import Layout from "../hocs/Layout";
 function MyApp({Component, pageProps}: AppProps) {
     return (
         <>
-            <Script strategy="lazyOnload" src='https://ticketscloud.org/static/scripts/widget/tcwidget.js'/>
+            <Script src='https://ticketscloud.org/static/scripts/widget/tcwidget.js'/>
             <Layout>
                 <Component {...pageProps} />
             </Layout>
