@@ -8,7 +8,13 @@ module.exports = {
         borderRadius: {
             'large': '16px',
         },
-        extend: {},
+        extend: {
+            backgroundImage: theme => ({
+                'hero-bg': "url('/bg-2.png')",
+                'radial-at-t':
+                    'radial-gradient(ellipse at top, var(--tw-gradient-stops))',
+            })
+        },
     },
     plugins: [],
 }
