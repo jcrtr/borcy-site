@@ -30,7 +30,7 @@ const StaticPropsDetail = ({item, errors}: Props) => {
                 <Link href={'/'}>
                 <div className="h-[200px] lg:max-w-screen-xl flex flex-wrap items-center justify-center mb-12">
                     <div className={'flex justify-center'}>
-                        <Image src={Logo} width={'120px'} height={'120px'}/>
+                        <Image src={`/logo.png`} width={'120px'} height={'120px'}/>
                     </div>
                     <div className={'lg:px-12 ml-4'}>
                         <h1 className={'font-bold text-white text-4xl py-2 text-center lg:text-left'}>БОРЦЫ</h1>
