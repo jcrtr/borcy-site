@@ -15,7 +15,7 @@ import Link from "next/link";
 const ReactPlayer = dynamic(() => import("react-player/lazy"), {ssr: false});
 
 const StaticPropsDetail = ({item, errors}: Props) => {
-    const {id, url, name, video} = item
+    const {url, name, video} = item
     // if (errors) {
     //   return (
     //       <p>
@@ -23,20 +23,33 @@ const StaticPropsDetail = ({item, errors}: Props) => {
     //       </p>
     //   )
     // }
-    let idTour = id
+    let id: string
+    switch (url) {
+        case 'vladikavkaz':
+            id = '62e3a1786ebe72fae51869e9'
+            break
+        case 'nalchik':
+            id = '62e3a252ac242fcbbee1336c'
+            break
+        case 'krasnodar':
+            id = '62e3a3245170acf030b199fa'
+            break
+    }
 
     return (
         <>
-            <div className={'min-h-screen bg-radial-at-t from-gray-700 via-gray-900 to-gray-900 flex flex-col items-center justify-start'}>
+            <div
+                className={'min-h-screen bg-radial-at-t from-gray-700 via-gray-900 to-gray-900 flex flex-col items-center justify-start'}>
                 <Link href={'/'}>
-                <div className="h-[200px] lg:max-w-screen-xl flex flex-wrap items-center justify-center mb-12">
-                    <div className={'flex justify-center'}>
-                        <Image src={`/logo.png`} width={'120px'} height={'120px'}/>
+                    <div className="h-[200px] lg:max-w-screen-xl flex flex-wrap items-center justify-center mb-12">
+                        <div className={'flex justify-center'}>
+                            <Image src={`/logo.png`} width={'120px'} height={'120px'}/>
+                        </div>
+                        <div className={'lg:px-12 ml-4'}>
+                            <h1 className={'font-bold text-white text-4xl py-2 text-center lg:text-left'}>БОРЦЫ</h1>
+                        </div>
                     </div>
-                    <div className={'lg:px-12 ml-4'}>
-                        <h1 className={'font-bold text-white text-4xl py-2 text-center lg:text-left'}>БОРЦЫ</h1>
-                    </div>
-                </div></Link>
+                </Link>
                 <h1 className={'font-bold text-white text-4xl py-2 text-center lg:mb-12'}>{name}</h1>
                 {/*<div className={'lg:py-12 w-[380px] lg:w-1/3'}>*/}
                 {/*<div className={'player-wrapper'}>*/}
@@ -53,7 +66,7 @@ const StaticPropsDetail = ({item, errors}: Props) => {
                 {/*</div>*/}
                 <button type="button"
                         className="tc-background-tomato"
-                        data-tc-event={idTour}
+                        data-tc-event={id}
                         data-tc-token={process.env.API_TICKET}>
                     Купить билет
                 </button>
