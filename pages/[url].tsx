@@ -23,6 +23,7 @@ const StaticPropsDetail = ({item, errors}: Props) => {
     //       </p>
     //   )
     // }
+    let idTour = id
 
     return (
         <>
@@ -52,7 +53,7 @@ const StaticPropsDetail = ({item, errors}: Props) => {
                 {/*</div>*/}
                 <button type="button"
                         className="tc-background-tomato"
-                        data-tc-event={id}
+                        data-tc-event={idTour}
                         data-tc-token={process.env.API_TICKET}>
                     Купить билет
                 </button>
