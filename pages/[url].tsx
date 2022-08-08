@@ -2,39 +2,21 @@ import {Tours} from "../interfaces";
 import {sampleUserData} from '../utils/sample-data'
 import {GetStaticPaths, GetStaticProps} from "next";
 
+
+import dynamic from "next/dynamic";
+import Image from "next/image";
+import Link from "next/link";
+
+
 type Props = {
     item?: Tours
     errors?: string
 }
 
-import dynamic from "next/dynamic";
-import Image from "next/image";
-import Logo from "../public/logo.png";
-import Link from "next/link";
-
 const ReactPlayer = dynamic(() => import("react-player/lazy"), {ssr: false});
 
 const StaticPropsDetail = ({item, errors}: Props) => {
-    const {url, name, video} = item
-    // if (errors) {
-    //   return (
-    //       <p>
-    //         <span style={{ color: 'red' }}>Error:</span> {errors}
-    //       </p>
-    //   )
-    // }
-    let id: string
-    switch (url) {
-        case 'vladikavkaz':
-            id = '62e3a1786ebe72fae51869e9'
-            break
-        case 'nalchik':
-            id = '62e3a252ac242fcbbee1336c'
-            break
-        case 'krasnodar':
-            id = '62e3a3245170acf030b199fa'
-            break
-    }
+    const {id, url, name, video} = item
 
     return (
         <>

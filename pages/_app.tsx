@@ -4,11 +4,11 @@ import {AppProps} from 'next/app'
 import '../styles/index.css'
 import Script from "next/script";
 import Layout from "../hocs/Layout";
+import Head from "next/head";
 
 function MyApp({Component, pageProps}: AppProps) {
     return (
         <>
-            <Script strategy={'beforeInteractive'} src='https://ticketscloud.org/static/scripts/widget/tcwidget.js'/>
             <Layout>
                 <Component {...pageProps} />
             </Layout>

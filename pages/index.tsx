@@ -1,5 +1,3 @@
-import Image from 'next/image'
-import Logo from '../public/logo.png'
 import Link from "next/link";
 
 const IndexPage = () => (
@@ -20,34 +18,30 @@ const IndexPage = () => (
         <div className={'flex flex-wrap items-center justify-center text-center px-8'}>
             {/*<h2 className={'font-bold text-white text-4xl w-full py-12'}>Короче, концерты</h2>*/}
             <div className={'grid lg:grid-cols-3 gap-12'}>
-                <Link href={'/vladikavkaz'}>
-                    <a>
-                        <img
-                            className={'rounded-large transform transition duration-500 hover:scale-110 cursor-pointer'}
-                            src={`/borcy-site/6_VLADIKAVKAZ.jpg`}
-                            width={'400px'}
-                            height={'100%'}
-                            alt={''}/>
-                    </a>
-                </Link>
-                <Link href={'/nalchik'}>
-                    <a>
-                    <img className={'rounded-large transform transition duration-500 hover:scale-110 cursor-pointer'}
-                         src={`/borcy-site/7_NALCHIK.jpg`}
-                         width={'400px'}
-                         height={'100%'}
-                         alt={''}/>
-                        </a>
-                </Link>
-                <Link href={'/krasnodar'}>
-                    <a>
-                    <img className={'rounded-large transform transition duration-500 hover:scale-110 cursor-pointer'}
-                         src={`/borcy-site/9_KRASNODAR.jpg`}
-                         width={'400px'}
-                         height={'100%'}
-                         alt={''}/>
-                        </a>
-                </Link>
+                <a href={'/vladikavkaz'}>
+                    <img
+                        className={'rounded-large transform transition duration-500 hover:scale-110 cursor-pointer'}
+                        src={`6_VLADIKAVKAZ.jpg`}
+                        width={'400px'}
+                        height={'100%'}
+                        alt={''}/>
+                </a>
+                <a href={'/nalchik'}>
+                    <img
+                        className={'rounded-large transform transition duration-500 hover:scale-110 cursor-pointer'}
+                        src={`/borcy-site/7_NALCHIK.jpg`}
+                        width={'400px'}
+                        height={'100%'}
+                        alt={''}/>
+                </a>
+                <a href={'/krasnodar'}>
+                    <img
+                        className={'rounded-large transform transition duration-500 hover:scale-110 cursor-pointer'}
+                        src={`/borcy-site/9_KRASNODAR.jpg`}
+                        width={'400px'}
+                        height={'100%'}
+                        alt={''}/>
+                </a>
             </div>
         </div>
     </div>
