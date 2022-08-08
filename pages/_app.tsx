@@ -1,4 +1,4 @@
-import React from 'react'
+'import React from 'react'
 import {AppProps} from 'next/app'
 
 import '../styles/index.css'
@@ -8,7 +8,7 @@ import Layout from "../hocs/Layout";
 function MyApp({Component, pageProps}: AppProps) {
     return (
         <>
-            <Script src='https://ticketscloud.org/static/scripts/widget/tcwidget.js'/>
+            <Script strategy={'beforeInteractive'} src='https://ticketscloud.org/static/scripts/widget/tcwidget.js'/>
             <Layout>
                 <Component {...pageProps} />
             </Layout>
@@ -16,4 +16,4 @@ function MyApp({Component, pageProps}: AppProps) {
     )
 }
 
-export default MyApp;
+export default MyApp;'
